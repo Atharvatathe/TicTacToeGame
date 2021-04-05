@@ -18,8 +18,8 @@ public class TicTacToeGame
 	public static void main(String[] args)
 	{
 		System.out.println("welcome to Tic Tac Toe game ");
-		TicTacToeGame t1 = new TicTacToeGame();
-		t1.assignToBoard();
+		TicTacToeGame Tic_object = new TicTacToeGame();
+		Tic_object.assignToBoard();
 
 	}
 }
