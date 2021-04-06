@@ -44,6 +44,26 @@ public class TicTacToeGame
 		
 	}
 	
+	public void showBoard()
+	{
+		
+		
+        System.out.println("|---|---|---|");
+        System.out.println("| " + board[1] + " | "
+                           + board[2] + " | " + board[3]
+                           + " |");
+        System.out.println("|-----------|");
+        System.out.println("| " + board[4] + " | "
+                           + board[5] + " | " + board[6]
+                           + " |");
+        System.out.println("|-----------|");
+        System.out.println("| " + board[7] + " | "
+                           + board[8] + " | " + board[9]
+                           + " |");
+        System.out.println("|---|---|---|");
+    
+	}
+	
 	
 
 	public static void main(String[] args)
@@ -52,6 +72,7 @@ public class TicTacToeGame
 		TicTacToeGame Tic_object = new TicTacToeGame();
 		Tic_object.assignToBoard();
 		Tic_object.chooseOption();
+		Tic_object.showBoard();
 		
 	}
 }
