@@ -1,4 +1,5 @@
 import java.util.*;
+import java.awt.*; 
 
 
 public class TicTacToeGame
@@ -6,13 +7,14 @@ public class TicTacToeGame
 
 	public char board[] = new char[10] ;
 	public String user_value;
+	
 
 
 	public void assignToBoard()
 	{
 		for(int i=1; i<10 ;i++)
 		{
-			board[i]= 'x';
+			board[i]= ' ';
 			System.out.println("board:["+i+"]="+board[i]);
 		}
 
@@ -64,6 +66,27 @@ public class TicTacToeGame
     
 	}
 	
+	void selctLocation()
+	{
+		System.out.println("Choose the Board location between 1 to 9 ");
+		
+		Scanner select = new Scanner(System.in);
+		int choose = select.nextInt();
+		if(board[choose] == ' ')
+		{
+			System.out.println("Index is free You can Enetr value");
+			
+		}
+		else
+		{
+			System.out.println("Index "+choose+ " is not free You can choose another location");
+			//continue Task;
+		}
+			
+			
+			
+	}
+	
 	
 
 	public static void main(String[] args)
@@ -73,6 +96,7 @@ public class TicTacToeGame
 		Tic_object.assignToBoard();
 		Tic_object.chooseOption();
 		Tic_object.showBoard();
+		Tic_object.selctLocation();
 		
 	}
 }
