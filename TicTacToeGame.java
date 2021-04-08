@@ -7,7 +7,7 @@ public class TicTacToeGame
 
 	public char board[] = new char[10] ;
 	public String user_value;
-	
+	public static final int Is_Head=0,Is_Tail=1;
 
 
 	public void assignToBoard()
@@ -23,7 +23,7 @@ public class TicTacToeGame
 
 	public void chooseOption()
 	{
-		
+		System.out.print("\n");
 		System.out.println("User should Choose between X or O ");
 		Scanner sc_object = new Scanner(System.in);
 		user_value = sc_object.next();
@@ -48,7 +48,7 @@ public class TicTacToeGame
 	
 	public void showBoard()
 	{
-		
+		System.out.print("\n");
 		
         System.out.println("|---|---|---|");
         System.out.println("| " + board[1] + " | "
@@ -68,6 +68,7 @@ public class TicTacToeGame
 	
 	void selctLocation()
 	{
+		System.out.print("\n");
 		System.out.println("Choose the Board location between 1 to 9 ");
 		
 		Scanner select = new Scanner(System.in);
@@ -80,10 +81,28 @@ public class TicTacToeGame
 		else
 			System.out.println("Index "+choose+ " is not free You can choose another location");
 			
-			
-			
-			
 	}
+	
+	void makeToss()
+	{
+		System.out.print("\n");
+		System.out.println("Make Toss between user and computer");
+		System.out.println("If It is Head :User will play Tail :computer will play");
+		int toss = (int)Math.floor( Math.random() * 10) % 2;
+		
+		switch(toss)
+		{
+			case Is_Head:
+				System.out.println("Its Head:User will Play");
+				break;
+			
+			case Is_Tail:
+				System.out.println("Its Tail:Computer will Play");
+				break;
+		}
+	}
+			
+			
 	
 	
 
@@ -95,6 +114,7 @@ public class TicTacToeGame
 		Tic_object.chooseOption();
 		Tic_object.showBoard();
 		Tic_object.selctLocation();
+		Tic_object.makeToss();
 		
 	}
 }
