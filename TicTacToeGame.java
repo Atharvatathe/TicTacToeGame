@@ -78,10 +78,8 @@ public class TicTacToeGame
 			
 		}
 		else
-		{
 			System.out.println("Index "+choose+ " is not free You can choose another location");
-			//continue Task;
-		}
+			
 			
 			
 			
