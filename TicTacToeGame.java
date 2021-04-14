@@ -113,28 +113,28 @@ static String checkStatus()
   
             switch (a) {
             case 0:
-                line = board[0] + board[1] + board[2];
+                line = board[1] + board[2] + board[3];
                 break;
             case 1:
-                line = board[3] + board[4] + board[5];
+                line = board[4] + board[5] + board[6];
                 break;
             case 2:
-                line = board[6] + board[7] + board[8];
+                line = board[7] + board[8] + board[9];
                 break;
             case 3:
-                line = board[0] + board[3] + board[6];
-                break;
-            case 4:
                 line = board[1] + board[4] + board[7];
                 break;
-            case 5:
+            case 4:
                 line = board[2] + board[5] + board[8];
                 break;
+            case 5:
+                line = board[3] + board[6] + board[9];
+                break;
             case 6:
-                line = board[0] + board[4] + board[8];
+                line = board[1] + board[5] + board[9];
                 break;
             case 7:
-                line = board[2] + board[4] + board[6];
+                line = board[3] + board[5] + board[7];
                 break;
             }
             //For X winner
@@ -160,6 +160,12 @@ static String checkStatus()
   
 		return null;
     }
+	
+	
+	public static void checkICanWin(String value)
+	{
+		for(int i=1; i<8
+	}
 	
 
 	public static void main(String[] args)
